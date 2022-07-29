@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class reverse_K_times_linkedlist {
+public class reverse1stk {
     static Node head;
     static int size;
     public static class Node{
@@ -13,7 +13,7 @@ public class reverse_K_times_linkedlist {
         }
     }
     public static void main(String[] args) {
-     reverse_K_times_linkedlist li = new reverse_K_times_linkedlist();
+     reverse1stk li = new reverse1stk();
      Scanner sc = new Scanner(System.in);
      int n = sc.nextInt();
      for(int i=0;i<n;i++){
