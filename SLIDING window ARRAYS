@@ -61,3 +61,43 @@ public static void main (String[] args){
       maxConsecutiveOne = Math.max(maxConsecutiveOne, end-start+1);
       }
   }
+  
+  /*
+  3. Same question only change k flips
+  {1,1,0,0,0,1,1,1,1,1}, k=2
+  output 7
+  */
+  
+  Answer:- 
+  public static void main (String[] args){
+  int[] arr = {1,1,0,0,1,1,1,1,1};
+  int k = 2;
+  
+  int result = getCount(arr,k);
+  System.out.println(result);
+  }
+  public static void getCount(int[] arr, k){
+      int maxConsecutiveOne = 0;
+      int zeroCount = 0;
+      int start = 0;
+      for(int end=0;end<arr.length;end++){
+      if(arr[end]==0){
+      zeroCount++;
+      }
+      while(zeroCount > k){
+      if(arr[start] == 0){ 
+      zeroCount--;
+      }
+      start++;
+      }
+      maxConsecutiveOne = Math.max(maxConsecutiveOne, end-start+1);
+      }
+      return maxConsecutiveOne;
+  } 
+
+/*
+Minimum length subassay sum
+Given an array of positive integer and positive no. k, find smallest contigous subarray whose sum is either greater or equal yo k
+
+*/
+ 
